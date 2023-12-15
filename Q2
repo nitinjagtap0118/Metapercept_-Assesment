@@ -1,0 +1,28 @@
+        import java.sql.SQLOutput;
+        import java.util.Scanner;
+public class Main {
+    public static int findMaxNumber(Object[] arr) {
+        int maxNum = Integer.MIN_VALUE;
+
+        for (Object element : arr){
+            if(element instanceof object[]){
+                maxNum =Math.max(maxNum , findMaxNumber((Object[]) element));
+
+                } else if (element instanceof  Integer){
+                    maxNum = Math.max (maxNum, (Integer) element);
+
+                }
+
+
+
+                }
+                return maxNum;
+
+            }
+        }
+        public static void main (String[] args){
+            Object[] inputArray ={2,4,10, new Object[]{12,4,new Object()[]{100 ,99},4}, new Object[]{ 3,2,99}, 0};
+            int result = findMaxNumber(inputArray);
+            System.out.println(result);
+        }
+    }
